@@ -7,7 +7,19 @@
 \*------------------------------------*/
 
 :root {
+    --global-color-alpha-light: #4F95FF;
+    --global-color-alpha: #3385FF;
+    --global-color-alpha-dark: #2E77E6;
 
+    --global-color-text-alpha: #20223a;
+
+    --global-color-hover: #0061f4;
+    --global-color-selection: #3385FF;
+    --global-color-selection-light: #6fa8ff;
+    --global-color-alpha-x-dark:#1b4186;
+    --global-color-alpha-xx-dark: #20223a;
+
+    --global-background-color: #F5F6FA;
 }
 
 /* CSS variables here */
@@ -26,11 +38,11 @@ html {
     font-size: 16px;
     line-height: 1.5;
     font-family: Inter, sans-serif;
-    color: #20223a;
+    color: var(--global-color-text-alpha);
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color:#F5F6FA;
+    background-color: var(--global-background-color);
 }
 
 *,
@@ -47,13 +59,13 @@ html {
 */
 
 ::-moz-selection {
-    background: #3385FF;
+    background: var(--global-color-selection);
     color: white;
     text-shadow: none;
 }
 
 ::selection {
-    background: #3385FF;
+    background: var(--global-color-selection);
     color: white;
     text-shadow: none;
 }
@@ -158,18 +170,18 @@ hr {
 }
 
 a {
-    color: #3385FF;
+    color: var(--global-color-selection);
     transition: all .1s ease-in-out;
 }
 
 a:visited,
 a:active {
-    color: #6fa8ff;
+    color: var(--global-color-selection-light);
 }
 
 a:hover,
 a:focus {
-    color:#0061f4;
+    color: var(--global-color-hover);
 }
 
 /* ELEMENTS: Forms
@@ -196,6 +208,9 @@ label, input{
 
 .o-row--login {
     /* stuff here to align the card */
+    height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
 /* size modifiers */
@@ -446,13 +461,13 @@ label, input{
     height: 24px ;
 }
 .c-logo__inner-circle {
-    fill: #3385ff;
+    fill: var(--global-color-selection);
 }
 .c-logo__outer-circle {
-    fill: #1b4186;
+    fill: var(--global-color-alpha-x-dark);
 }
 .c-logo__text {
-    fill: #20223a;
+    fill: var(--global-color-alpha-xx-dark);
 }
 
 .c-logo__symbol {
@@ -549,7 +564,7 @@ label, input{
     outline: none;
     border-color: #caccd4;
     box-shadow: h-offset v-offset blur spread color;
-    box-shadow: 0 0 0 3px #3385ff4d;
+    box-shadow: 0 0 0 3px #3385FF4d;
 }
 
 /*
@@ -559,7 +574,15 @@ label, input{
 */
 
 .c-label {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 8px;
+    color: #606274;
+}
 
+.c-label--option {
+    margin-bottom: 0;
+    margin-left: 8px;
 }
 
 /* If a input is focused within the form-field class change te color of the label */
@@ -587,7 +610,7 @@ label, input{
 
     line-height: 20px;
 
-    border: 1px solid #2e77e6;
+    border: 1px solid #2E77E6;
     border-radius: 3px;
     background-color: #3385FF;
     
@@ -595,7 +618,7 @@ label, input{
 }
 
 .c-button:hover {
-    background-color: #186deb;
+    background-color: var(--global-color-hover);
 }
 
 .c-button:focus {
